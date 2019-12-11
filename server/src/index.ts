@@ -12,13 +12,13 @@ const publicPath = path.join(__dirname, '/public');
 app.set('port', PORT);
 
 app.use(morgan('dev'));
-app.use('/static', express.static(publicPath));
+app.use(express.static(publicPath));
 
 app.use('/user', userRouter);
 app.use('/product', productRouter);
 
 app.get('/', (_req,res) => {
-    res.send('inicio');
+    res.sendFile('index.html');
 })
 
 app.listen(app.get('port'), () => {
