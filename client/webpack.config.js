@@ -1,15 +1,11 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'development',
-  entry: {
-    app: ['./src/index.tsx'],
-    vendor: ['react', 'react-dom']
-  },
+  mode: 'development',//todo
   entry: './src/index.tsx',
-  devtool: 'inline-source-map',
-  devServer: {
-      contentBase: './dist'
+  devtool: 'inline-source-map',//todo
+  devServer: {//todo
+    contentBase: './dist',
   },
   module: {
     rules: [
@@ -26,6 +22,5 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
   }
 };
