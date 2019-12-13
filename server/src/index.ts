@@ -4,6 +4,7 @@ import path from 'path';
 
 import { userRouter } from './routes/user';
 import { productRouter } from './routes/product';
+import { db } from './data';
 
 const app = express();
 const PORT = 3000;
@@ -23,4 +24,5 @@ app.get('/', (_req,res) => {
 
 app.listen(app.get('port'), () => {
     console.log(`server running in http://localhost:${app.get('port')}`);
+    db();
 });
